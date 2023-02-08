@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            #myInput{
+                width: 80%;
+                font-size: 20px;
+                padding: 10px 10px 10px 20px;
+                margin-left: 150px;
+
+            }
+            #my_phonebook{
+                border-collapse: collapse;
+                width: 100%;
+                font-size: 18px;
+                border: 1px solid black;
+
+            }
+            #my_phonebook th, #my_phonebook td {
+                text-align: left;
+                padding: 12px;
+
+
+            }
+            #my_phonebook tr{
+                border-bottom: 1px solid #ddd;
+            }
+            #my_phonebook tr.header, #my_phonebook tr:hover {
+                background-color: #f1f1f1;
+            }
+
+                
+
+
+
+            
+            
+                
+        
+        </style>
+        <script>
+            function Myfunction(){
+                var input,filter,table, td ,tr i, txtvalue
+                input = document.getElementById('myInput')
+                filter = input.value.toUpperCase();
+                table =
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1> my phonebook</h2>
+            <input type="text" id="myInput" onkeyup="Myfunction()" placeholder="Search for Names...">
+            <table id="my_phonebook">
+                <tr class=" header">
+                    <th style="width:60%">name</th>
+                    <th style="width: 40%">Mob no.</th>
+                </tr>
+                <tr>
+                    <td>Ratish Dalvi</td>
+                    <td>9545**********</td>
+                </tr>
+                <tr>
+                    <td>shubham Padekar</td>
+                    <td>4567**********</td>
+                </tr>
+                <tr>
+                    <td>Prashant Borde</td>
+                    <td>7890*********</td>
+                </tr>
+                <tr>
+                    <td>Neha Dhanawade</td>
+                    <td>6789**********</td>
+                </tr>
+            </table>
+
+            
+    </body>
+</html>    

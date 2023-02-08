@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                margin-top: 20px;
+            
+            }
+            .filter{
+                width: 100px;
+                background-color: #2196f3;
+                line-height: 100px;
+                text-align: center;
+                margin: 2px;
+                float: left;
+                margin-top: 10px;
+            }
+        </style>
+        <script>
+            filterSelection("all")
+               function filterSelection(c){
+                var x,i;
+                x = document.getElementsByClassName("filter");
+                if(c=="all") c = "";
+                for (i=0; i< x.length; i++){
+                w3RemoveClass(x[i],"show");
+                if(x[i]).className.indexof(c > -1)w3AddClass(x[i],"show")
+               }
+            }
+
+        </script>
+    </head>
+    <body>
+        <h2>Filter Div Elements</h2>
+            <div class="myButton">
+              <button class="btn" onclick="filterSelection('all')">Show All</button>
+              <button class="btn" onclick="">Cars</button>
+              <button class="btn" onclick="">Animals</button>
+              <button class="btn" onclick="">Fruits</button>
+              <button class="btn" onclick="">Colors</button>
+            </div>
+            <div class="Cointainer">
+                <div class="filter cars">BMW</div>
+                <div class="filter colors fruit">ORANGE</div>
+                <div class="filter cars">VOLVO</div>
+                <div class="filter colors">RED</div>
+                <div class="filter cars">MUSTANG</div>
+                <div class="filter colors">BLUE</div>
+                <div class="filter animals">CAT</div>
+                <div class="filter animals">DOG</div>
+                <div class="filter fruit">MELON</div>
+                <div class="filter fruit">KIWI</div>
+                <div class="filter fruit">BANANA</div>
+                <div class="filter fruit">LEMON</div>
+                <div class="filter animals">COW</div>
+            </div>
+
+    </body>
+</html>    
