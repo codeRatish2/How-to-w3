@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <button onclick="document.getElementById('id01').style.display='block'">Open modal</button>
+         <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display=none" class="close" title="close_modal">&times;</span>
+            <form class="modal-content" action="/action_php">
+                <div class="container">
+                    <h1>Delete Account</h1>
+                    <p>Are You Sure you want to delete your account</p>
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <button type="button" class="deletebtn">Delete</button>
+                    </div>
+                 </div>
+             </form>
+        </div>
+
+    </body>
+</html>    
