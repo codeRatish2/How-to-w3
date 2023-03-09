@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+        .form-popup {
+           display: none;
+           position: fixed;
+           bottom: 0;
+           right: 15px;
+           border: 3px solid #f1f1f1;
+           z-index: 9;
+        }
+        .form-cointainer{
+           max-width: 300px;
+           padding: 10px;
+           background: white;
+
+        }
+        .form-container input[type=text], .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        .form-container .cancel {
+            background-color: red;
+        }
+        .form-container .btn:hover, .open-button:hover {
+            opacity: 1;
+        }
+
+
+	</style>
+</head>
+<body>
+	<h2>Popup Form</h2>
+    <p>Click on the button at the bottom of this page to open the login form.</p>
+    <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+
+    <button class="open-button" onclick="openForm()">OPEN</button>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+           <h1>Login</h1>
+
+           <label for="email"><b>Email</b></label>
+           <input type="text" placeholder="Enter Email" name="email" required>
+
+           <label for="psw"><b>Password</b></label>
+           <input type="password" placeholder="Enter Password" name="psw" required>
+
+           <button type="submit" class="btn">Login</button>
+           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    
+    <script>
+        function openForm() {
+           document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+
+</body>
+</html>
