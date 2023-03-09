@@ -1,0 +1,58 @@
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style>
+			.smartphone{
+			   position: relative;
+			   height: 640px;
+			   width:360px ;
+			   margin: auto;
+			   border: 16px solid black;
+			   border-top-width: 60px;
+			   border-bottom-width:60px ;
+			   border-radius: 16px;
+			}
+			.smartphone:before{
+			    content: "";
+			    display: block;
+			    width: 60px;
+			    height: 5px;
+			    position: absolute;
+			    top: -30px;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+			    background: #333;
+			    border-radius: 10px;
+			}
+			.smartphone:after{
+			    content: '';
+			    display: block;
+			    width:5px;
+			    height: 35px;
+			    left: 50%;
+                bottom: -65px;
+                transform: translate(-50%, -50%);
+                background: #333;
+                border-radius: 50%;
+            }
+            .smartphone .content {
+               width: 360px;
+               height: 640px;
+               background: white;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="smartphone">
+  <div class="content">
+    <iframe src="/w3css/tryw3css_templates_band.htm" style="width:100%;border:none;height:100%">
+  </div>
+</div>
+
+	
+	</body>
+	</html>
