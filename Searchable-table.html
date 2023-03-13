@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #myinput{
+          background-image: url('/css/searchicon.png');
+          background-position: 12px 10px;
+          width: 80%;
+          font-size: 16px; 
+          padding: 12px 20px 12px 40px; 
+          border: 1px solid #ddd; 
+          margin-bottom: 12px; 
+        }
+        #mytable{
+            border-collapse: collapse;
+            width: 80%;
+            border: 1px solid #ddd; 
+            font-size: 18px;
+        }
+        #mytable  th , #mytable td{
+            text-align: left;
+            padding: 12px;
+        }
+        #mytable tr{
+            border-bottom: 1px solid #ddd;
+        }
+        #myTable tr.header, #myTable tr:hover {
+            background-color: #f1f1f1;
+        }
+
+  
+
+        
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Searchable Table</h1>
+    <input type="text" id="myinput" onkeyup="Searchable()" placeholder="search by names">
+    <table id="mytable">
+      <tr class="header">
+        <th style="width: 60%;"> Name</th>
+        <th style="width:40%;">Mob no.</th>
+      </tr>
+      <tr>
+        <td>Ratiesh</td>
+        <td>9545********</td>
+      </tr>
+      <tr>
+        <td>Raj</td>
+        <td>9845********</td>
+      </tr>
+      <tr>
+        <td>Neha</td>
+        <td>9765********</td>
+      </tr>    
+      <tr>
+        <td>Ramesh</td>
+        <td>7856*******</td>
+      </tr>
+      <tr>
+        <td>Ruchita</td>
+        <td>8564********</td>
+      </tr>
+        
+    </table>
+
+    <script>
+        function Searchable(){
+            var input, filter, i ,Table, td,tr, txtvalue;
+            input = document.getElementById("myinput");
+            filter = input.value.toUpperCase();
+            Table = document.getElementById("mytable");
+            tr = document.getElementsByTagName('tr');
+
+            for(i=0;i<tr.length;i++){
+                td = tr[i].getElementsByTagName("td")[0];
+                if(td){
+                    txtValue= td.textContent || td.innerText;
+                    if(txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display="";
+                    }else{
+                        tr[i].style.display="none";
+                    }
+
+                }
+            }
+
+        }
+
+     </script>
+
+</body>
+
+</html>
